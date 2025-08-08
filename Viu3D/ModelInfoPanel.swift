@@ -59,8 +59,11 @@ struct ModelInfoPanel: View {
                     // 性能信息
                     InfoSection(title: "渲染信息") {
                         InfoRow(label: "渲染引擎", value: "SceneKit")
-                        InfoRow(label: "光照模式", value: "简单光照 (Lambert)")
+                        InfoRow(label: "光照模式", value: getLightingMode())
                         InfoRow(label: "抗锯齿", value: "2x MSAA")
+                        if isGLTFFile() {
+                            InfoRow(label: "格式支持", value: "GLTFSceneKit")
+                        }
                     }
                 }
                 .padding(16)
@@ -74,6 +77,21 @@ struct ModelInfoPanel: View {
         .background(Color(.systemGray6))
         .cornerRadius(12)
         .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
+    }
+    
+    // 判断是否为glTF文件
+    private func isGLTFFile() -> Bool {
+        let exten = modelData.modelInfo.fileName.components(separatedBy: ".").last?.lowercased() ?? ""
+        return exten == "gltf" || exten == "glb"
+    }
+    
+    // 获取光照模式描述
+    private func getLightingMode() -> String {
+        if isGLTFFile() {
+            return "混合模式 (PBR/Lambert)"
+        } else {
+            return "简单光照 (Lambert)"
+        }
     }
 }
 

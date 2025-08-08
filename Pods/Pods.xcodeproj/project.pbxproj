@@ -1,0 +1,745 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C3F5059FF4F208311F364DAC722A36 /* GLTFGlTFChildOfRootProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D23A10C46145F8F563BFC914C2A466 /* GLTFGlTFChildOfRootProperty.swift */; };
+		03E2A1B9A501FE683572B8D1DED552B2 /* GLTFMaterialPbrMetallicRoughness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C609E65CE3315FEA9FBF6C2F32F1390 /* GLTFMaterialPbrMetallicRoughness.swift */; };
+		0677867B3D7BDDD307B13EC0793DD2EA /* GLTFTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D996C01441D16F46C5021F0120256C /* GLTFTexture.swift */; };
+		07111B09B8F7E19D13FF81382774FCB6 /* GLTFUnarchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F27186C8B8359778A8819C2D48F55A /* GLTFUnarchiver.swift */; };
+		121DB4B9E6A9D542C529E813C7568E4C /* GLTFTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7D67395A84D500F53DAA471D20938 /* GLTFTypes.swift */; };
+		173DAC03379FD72325C90E1300223238 /* GLTFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB5C951E470A62B3B4E4A612E59ECD /* GLTFImage.swift */; };
+		1743531FF5CD37A084FD4F783CA9141F /* GLTFAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A9CDEE13F6C5234446E597B36CD6B /* GLTFAsset.swift */; };
+		1AFC22603A537704E8B06BE6BC2410BE /* GLTFMaterialNormalTextureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76955F36F9E685C80A48DD6EADA3EEF0 /* GLTFMaterialNormalTextureInfo.swift */; };
+		2421AEC89235FA53E437257F6B005602 /* GLTFBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D24213884DE02BEF9E4012B6E6B0ED /* GLTFBuffer.swift */; };
+		2793DF7C6867104CB8131BD26C5F8B2A /* GLTFGlTFProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE5818F88CB9A6E281F10A357D0186 /* GLTFGlTFProperty.swift */; };
+		28C0AD1426C78E626588A4007ED72EB6 /* GLTFSceneKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E3181541CCDED2BA383127A1527D584 /* GLTFSceneKit-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2F1939DC3D308B0132DF75C05831E82F /* GLTFAnimationSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1091E842E840773B05F158F7590A6A /* GLTFAnimationSampler.swift */; };
+		3806FB2F2FB0F62FFB45EDC4A774A2F6 /* GLTFMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D46EADCC6B9B3340005D5068F0879 /* GLTFMaterial.swift */; };
+		3B5DF586D174B8B690B04F0B6FDEDB54 /* GLTFMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E392B6ACE7775F9694F4EE6AF3E2BDC /* GLTFMesh.swift */; };
+		3F0A266AD7D8973A4BC51E29A080AC18 /* GLTFAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F852B8FF67088D38E10257ADF20A5F /* GLTFAnimation.swift */; };
+		418016526F96F7972D61A92AD68B2455 /* GLTFSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF4DDF15AF2CAF6EC80CDD0B13E1228 /* GLTFSampler.swift */; };
+		4B36EB3C6093471DB6189B2CFD78EC9B /* GLTFBufferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F791A640A4533C98CF0DDA2CF0C17BF /* GLTFBufferView.swift */; };
+		4C37414C3669F403B4A6C70B013907DC /* GLTFExtrasTargetNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB3F950973CED3AF5FCE2FC3832765 /* GLTFExtrasTargetNames.swift */; };
+		50EE1F9C860DEE7CC6C02876EC28CDE4 /* Pods-Viu3D-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F484ED4414E8D71F91AD693F1E2DE04 /* Pods-Viu3D-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		58CF0AF3E604226E935B112219A6BDFE /* GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE16E3F99B9527B94677669E3B51F4D /* GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift */; };
+		5D4BD5F75A45B8C93D45884FF4D27A78 /* GLTFSceneSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399EF49A4622055C50D7359A31D1CC6 /* GLTFSceneSource.swift */; };
+		5F76D8862FFA6E8961F02A7CA8E2607C /* GLTFAccessorSparse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A811FD96D91B0EA3B0991B73B8539D /* GLTFAccessorSparse.swift */; };
+		6549E39EE7190055639F279577D66FBF /* GLTFErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC48AB3C61F1F78E5982A25AAABD75 /* GLTFErrors.swift */; };
+		6697884E139DCCDD29CD7A3CBCA31BCE /* GLTFScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B07E9A7829DD0AB6346C47CA997494 /* GLTFScene.swift */; };
+		6A91C698254344D1287A3002F252C6DF /* GLTFSkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2481CF8CDC32842210484EB7C77BF /* GLTFSkin.swift */; };
+		7D98745B0C8D272F4C8FDAA15267A711 /* GLTFCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C46B8174A593824769D1097C36EF440 /* GLTFCamera.swift */; };
+		808C7872FB028DDC9A4A07CDF7F3CDE8 /* GLTFExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036259F501AAD43299340A0F8241F6C8 /* GLTFExtension.swift */; };
+		8BD50FA7C05DB4EA5FCCB97C2B48FACE /* GLTFAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47227011B1AC1A2697084765C9D95D8F /* GLTFAccessor.swift */; };
+		8C7EFFD23E85EF3B2C7D938A6544D6B0 /* Pods-Viu3D-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B292598A5F1E98A0BE395D6187BECEF /* Pods-Viu3D-dummy.m */; };
+		8E72CCFFB4D3D748C807B2FF5963AB44 /* GLTFCameraOrthographic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8638106707FDF66C33932E6454A3D4 /* GLTFCameraOrthographic.swift */; };
+		920344C5A6C7171A30A2178B8B598E19 /* ExtensionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00D992D0E9E3EF0A26DD9B4687E263 /* ExtensionList.swift */; };
+		92F765E373A6C000A5A077F7B2A4A3E5 /* GLTFAnimationChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1A37ECD3B206C80037218BEFB94450 /* GLTFAnimationChannel.swift */; };
+		9ABE8426C5D00EEEB08B0FC003659E1D /* GLTFGlTFid.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2FDB04431C3FB2239E6C097DC5F948 /* GLTFGlTFid.swift */; };
+		A40F2C8761D71FDC5727B3565EAD5A9E /* GLTFExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9374CE2B7D1B8B810CF74F7146607119 /* GLTFExtras.swift */; };
+		A594388925AF56BA44872FB0F04CEDD6 /* GLTFAccessorSparseValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0EC7ECE0575FF2F670DFFF1799F72 /* GLTFAccessorSparseValues.swift */; };
+		ACCBF441B0402845687AD973778DA673 /* GLTFMaterialOcclusionTextureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0164E1C6CB3722B91287183563CD9A3A /* GLTFMaterialOcclusionTextureInfo.swift */; };
+		B68E2AC09E72C8CA06A46CD430C273C9 /* GLTFTextureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6BAA36A965D66B2BF5CE9C7E6C9385 /* GLTFTextureInfo.swift */; };
+		B98A05FEA518802E8FA0F4EDD79D8B69 /* GLTFFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357C69440E52D3D4BF8BAA53F508E63 /* GLTFFunctions.swift */; };
+		C69C93D8C93D124BBC93EEB6B1C1C0DA /* GLTFCameraPerspective.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B3FBC20AC08BC3A57CE9FE5BCF877D /* GLTFCameraPerspective.swift */; };
+		C91F00E65DB6AD256D00F1F40A3A1424 /* GLTFSceneKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7DF53A737EA34DA96B3FE1EC5CBBC7 /* GLTFSceneKit-dummy.m */; };
+		D5492412A420D864281867AA874C6EFF /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E892C4E1110997D08D7238D126D942E9 /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift */; };
+		D79EC352A37505ECC99A7F84222E76A9 /* GLTFAccessorSparseIndices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7F36997A2C8380A944D3AEE7203AA /* GLTFAccessorSparseIndices.swift */; };
+		D8EFC901D971583B61C9C1B7A375B120 /* GLTFNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B4CA94AFCC04DCAAB607F3640916B /* GLTFNode.swift */; };
+		E8DE07A128ADE9A7672805E9C5953847 /* GLTFAnimationChannelTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1820A8BAFBC62940B14BAF2E609AE7D /* GLTFAnimationChannelTarget.swift */; };
+		F49173B20A5C1387F0F03304C86BBF8E /* GLTFGlTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178CE50FED5A4B4377F0E5B7853EF0D3 /* GLTFGlTF.swift */; };
+		F96A9813A19BB0FD5F2EC60A8AF8F42A /* GLTFMeshPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4613F4317CAFF5595AE288CAC3256 /* GLTFMeshPrimitive.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A575A1A81E1FB905CEB1EDBD695EA267 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2665B1779B880B2D882474D5E6EA6B13;
+			remoteInfo = GLTFSceneKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0164E1C6CB3722B91287183563CD9A3A /* GLTFMaterialOcclusionTextureInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFMaterialOcclusionTextureInfo.swift; path = Sources/GLTFSceneKit/schema/GLTFMaterialOcclusionTextureInfo.swift; sourceTree = "<group>"; };
+		036259F501AAD43299340A0F8241F6C8 /* GLTFExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFExtension.swift; path = Sources/GLTFSceneKit/schema/GLTFExtension.swift; sourceTree = "<group>"; };
+		045E09F8BEFE8CA29A675D3C12178564 /* Pods-Viu3D-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Viu3D-acknowledgements.markdown"; sourceTree = "<group>"; };
+		05B07E9A7829DD0AB6346C47CA997494 /* GLTFScene.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFScene.swift; path = Sources/GLTFSceneKit/schema/GLTFScene.swift; sourceTree = "<group>"; };
+		178CE50FED5A4B4377F0E5B7853EF0D3 /* GLTFGlTF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFGlTF.swift; path = Sources/GLTFSceneKit/schema/GLTFGlTF.swift; sourceTree = "<group>"; };
+		1C46B8174A593824769D1097C36EF440 /* GLTFCamera.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFCamera.swift; path = Sources/GLTFSceneKit/schema/GLTFCamera.swift; sourceTree = "<group>"; };
+		1D1091E842E840773B05F158F7590A6A /* GLTFAnimationSampler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFAnimationSampler.swift; path = Sources/GLTFSceneKit/schema/GLTFAnimationSampler.swift; sourceTree = "<group>"; };
+		1D7A9CDEE13F6C5234446E597B36CD6B /* GLTFAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFAsset.swift; path = Sources/GLTFSceneKit/schema/GLTFAsset.swift; sourceTree = "<group>"; };
+		24F852B8FF67088D38E10257ADF20A5F /* GLTFAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFAnimation.swift; path = Sources/GLTFSceneKit/schema/GLTFAnimation.swift; sourceTree = "<group>"; };
+		2C42C538280FAFF351C82CC508C39066 /* Pods-Viu3D-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Viu3D-acknowledgements.plist"; sourceTree = "<group>"; };
+		2C609E65CE3315FEA9FBF6C2F32F1390 /* GLTFMaterialPbrMetallicRoughness.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFMaterialPbrMetallicRoughness.swift; path = Sources/GLTFSceneKit/schema/GLTFMaterialPbrMetallicRoughness.swift; sourceTree = "<group>"; };
+		33D24213884DE02BEF9E4012B6E6B0ED /* GLTFBuffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFBuffer.swift; path = Sources/GLTFSceneKit/schema/GLTFBuffer.swift; sourceTree = "<group>"; };
+		3A0B4CA94AFCC04DCAAB607F3640916B /* GLTFNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFNode.swift; path = Sources/GLTFSceneKit/schema/GLTFNode.swift; sourceTree = "<group>"; };
+		3A6BAA36A965D66B2BF5CE9C7E6C9385 /* GLTFTextureInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFTextureInfo.swift; path = Sources/GLTFSceneKit/schema/GLTFTextureInfo.swift; sourceTree = "<group>"; };
+		3B292598A5F1E98A0BE395D6187BECEF /* Pods-Viu3D-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Viu3D-dummy.m"; sourceTree = "<group>"; };
+		3BFB3F950973CED3AF5FCE2FC3832765 /* GLTFExtrasTargetNames.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFExtrasTargetNames.swift; path = Sources/GLTFSceneKit/schema/GLTFExtrasTargetNames.swift; sourceTree = "<group>"; };
+		3E691237000CD597CC99671025C0685F /* GLTFShaderModifierSurface_pbrSpecularGlossiness.shader */ = {isa = PBXFileReference; includeInIndex = 1; name = GLTFShaderModifierSurface_pbrSpecularGlossiness.shader; path = Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness.shader; sourceTree = "<group>"; };
+		3F18A6D9990F792811EA2E1C12FA2BA4 /* GLTFSceneKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLTFSceneKit.debug.xcconfig; sourceTree = "<group>"; };
+		3F484ED4414E8D71F91AD693F1E2DE04 /* Pods-Viu3D-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Viu3D-umbrella.h"; sourceTree = "<group>"; };
+		43B4613F4317CAFF5595AE288CAC3256 /* GLTFMeshPrimitive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFMeshPrimitive.swift; path = Sources/GLTFSceneKit/schema/GLTFMeshPrimitive.swift; sourceTree = "<group>"; };
+		47227011B1AC1A2697084765C9D95D8F /* GLTFAccessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFAccessor.swift; path = Sources/GLTFSceneKit/schema/GLTFAccessor.swift; sourceTree = "<group>"; };
+		52916487C7DDF478793875127731A2D7 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader */ = {isa = PBXFileReference; includeInIndex = 1; name = GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader; path = Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader; sourceTree = "<group>"; };
+		57BAD43345CB35531C5B94F9B7D7AB52 /* Pods-Viu3D */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-Viu3D"; path = "libPods-Viu3D.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A1A37ECD3B206C80037218BEFB94450 /* GLTFAnimationChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFAnimationChannel.swift; path = Sources/GLTFSceneKit/schema/GLTFAnimationChannel.swift; sourceTree = "<group>"; };
+		65D996C01441D16F46C5021F0120256C /* GLTFTexture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFTexture.swift; path = Sources/GLTFSceneKit/schema/GLTFTexture.swift; sourceTree = "<group>"; };
+		6AC7D67395A84D500F53DAA471D20938 /* GLTFTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFTypes.swift; path = Sources/GLTFSceneKit/GLTFTypes.swift; sourceTree = "<group>"; };
+		6E392B6ACE7775F9694F4EE6AF3E2BDC /* GLTFMesh.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFMesh.swift; path = Sources/GLTFSceneKit/schema/GLTFMesh.swift; sourceTree = "<group>"; };
+		71D23A10C46145F8F563BFC914C2A466 /* GLTFGlTFChildOfRootProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFGlTFChildOfRootProperty.swift; path = Sources/GLTFSceneKit/schema/GLTFGlTFChildOfRootProperty.swift; sourceTree = "<group>"; };
+		7357C69440E52D3D4BF8BAA53F508E63 /* GLTFFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFFunctions.swift; path = Sources/GLTFSceneKit/GLTFFunctions.swift; sourceTree = "<group>"; };
+		76955F36F9E685C80A48DD6EADA3EEF0 /* GLTFMaterialNormalTextureInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFMaterialNormalTextureInfo.swift; path = Sources/GLTFSceneKit/schema/GLTFMaterialNormalTextureInfo.swift; sourceTree = "<group>"; };
+		7CB2481CF8CDC32842210484EB7C77BF /* GLTFSkin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFSkin.swift; path = Sources/GLTFSceneKit/schema/GLTFSkin.swift; sourceTree = "<group>"; };
+		7F791A640A4533C98CF0DDA2CF0C17BF /* GLTFBufferView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFBufferView.swift; path = Sources/GLTFSceneKit/schema/GLTFBufferView.swift; sourceTree = "<group>"; };
+		8B5D290136A3A8DC977606BFBF435DAA /* GLTFShaderModifierSurface_alphaModeBlend.shader */ = {isa = PBXFileReference; includeInIndex = 1; name = GLTFShaderModifierSurface_alphaModeBlend.shader; path = Sources/GLTFSceneKit/GLTFShaderModifierSurface_alphaModeBlend.shader; sourceTree = "<group>"; };
+		9374CE2B7D1B8B810CF74F7146607119 /* GLTFExtras.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFExtras.swift; path = Sources/GLTFSceneKit/schema/GLTFExtras.swift; sourceTree = "<group>"; };
+		9CEB5C951E470A62B3B4E4A612E59ECD /* GLTFImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFImage.swift; path = Sources/GLTFSceneKit/schema/GLTFImage.swift; sourceTree = "<group>"; };
+		9D7DF53A737EA34DA96B3FE1EC5CBBC7 /* GLTFSceneKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GLTFSceneKit-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E3181541CCDED2BA383127A1527D584 /* GLTFSceneKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLTFSceneKit-umbrella.h"; sourceTree = "<group>"; };
+		9F00D992D0E9E3EF0A26DD9B4687E263 /* ExtensionList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionList.swift; path = Sources/GLTFSceneKit/schema/extensions/ExtensionList.swift; sourceTree = "<group>"; };
+		9FD778260FF876A4E75936CE40E881E4 /* GLTFSceneKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLTFSceneKit-prefix.pch"; sourceTree = "<group>"; };
+		A4D748873D1AC3B3B7843F8C98F1F678 /* GLTFSceneKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLTFSceneKit.release.xcconfig; sourceTree = "<group>"; };
+		A8C0010C5D3A968D37116050B6FC23A6 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader */ = {isa = PBXFileReference; includeInIndex = 1; name = GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader; path = Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader; sourceTree = "<group>"; };
+		AB2FDB04431C3FB2239E6C097DC5F948 /* GLTFGlTFid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFGlTFid.swift; path = Sources/GLTFSceneKit/schema/GLTFGlTFid.swift; sourceTree = "<group>"; };
+		ACA0EC7ECE0575FF2F670DFFF1799F72 /* GLTFAccessorSparseValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFAccessorSparseValues.swift; path = Sources/GLTFSceneKit/schema/GLTFAccessorSparseValues.swift; sourceTree = "<group>"; };
+		AFA84CAF692C5B505C1D647F1FF5A7DB /* Pods-Viu3D.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Viu3D.modulemap"; sourceTree = "<group>"; };
+		B0C68DCCCAB0B3F7D3499FCCBA793C9A /* GLTFShaderModifierSurface.shader */ = {isa = PBXFileReference; includeInIndex = 1; name = GLTFShaderModifierSurface.shader; path = Sources/GLTFSceneKit/GLTFShaderModifierSurface.shader; sourceTree = "<group>"; };
+		B399EF49A4622055C50D7359A31D1CC6 /* GLTFSceneSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFSceneSource.swift; path = Sources/GLTFSceneKit/GLTFSceneSource.swift; sourceTree = "<group>"; };
+		B5F7F36997A2C8380A944D3AEE7203AA /* GLTFAccessorSparseIndices.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFAccessorSparseIndices.swift; path = Sources/GLTFSceneKit/schema/GLTFAccessorSparseIndices.swift; sourceTree = "<group>"; };
+		BB39197CD30EC913718815491C63DE26 /* Pods-Viu3D.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Viu3D.release.xcconfig"; sourceTree = "<group>"; };
+		BD1E533305D98B83898C91456A57F02B /* GLTFShaderModifierFragment_alphaCutoff.shader */ = {isa = PBXFileReference; includeInIndex = 1; name = GLTFShaderModifierFragment_alphaCutoff.shader; path = Sources/GLTFSceneKit/GLTFShaderModifierFragment_alphaCutoff.shader; sourceTree = "<group>"; };
+		C1820A8BAFBC62940B14BAF2E609AE7D /* GLTFAnimationChannelTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFAnimationChannelTarget.swift; path = Sources/GLTFSceneKit/schema/GLTFAnimationChannelTarget.swift; sourceTree = "<group>"; };
+		D1F27186C8B8359778A8819C2D48F55A /* GLTFUnarchiver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFUnarchiver.swift; path = Sources/GLTFSceneKit/GLTFUnarchiver.swift; sourceTree = "<group>"; };
+		D81D46EADCC6B9B3340005D5068F0879 /* GLTFMaterial.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFMaterial.swift; path = Sources/GLTFSceneKit/schema/GLTFMaterial.swift; sourceTree = "<group>"; };
+		D99D68E2DFB05548E79F9E4B6F4B2173 /* Pods-Viu3D-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Viu3D-resources.sh"; sourceTree = "<group>"; };
+		DDE16E3F99B9527B94677669E3B51F4D /* GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift; path = Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift; sourceTree = "<group>"; };
+		DF8638106707FDF66C33932E6454A3D4 /* GLTFCameraOrthographic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFCameraOrthographic.swift; path = Sources/GLTFSceneKit/schema/GLTFCameraOrthographic.swift; sourceTree = "<group>"; };
+		E4CBDE982D75105449C7453B46898548 /* GLTFSceneKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GLTFSceneKit.modulemap; sourceTree = "<group>"; };
+		E6B3FBC20AC08BC3A57CE9FE5BCF877D /* GLTFCameraPerspective.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFCameraPerspective.swift; path = Sources/GLTFSceneKit/schema/GLTFCameraPerspective.swift; sourceTree = "<group>"; };
+		E7A91DB74EAEFC5D8F46D8BC7283F998 /* GLTFShaderModifierSurface_doubleSidedWorkaround.shader */ = {isa = PBXFileReference; includeInIndex = 1; name = GLTFShaderModifierSurface_doubleSidedWorkaround.shader; path = Sources/GLTFSceneKit/GLTFShaderModifierSurface_doubleSidedWorkaround.shader; sourceTree = "<group>"; };
+		E892C4E1110997D08D7238D126D942E9 /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift; path = Sources/GLTFSceneKit/schema/extensions/KHR_materials_common/GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift; sourceTree = "<group>"; };
+		F1BE5818F88CB9A6E281F10A357D0186 /* GLTFGlTFProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFGlTFProperty.swift; path = Sources/GLTFSceneKit/schema/GLTFGlTFProperty.swift; sourceTree = "<group>"; };
+		F411884C28FE54F1CB377DD2FF9AD261 /* Pods-Viu3D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Viu3D.debug.xcconfig"; sourceTree = "<group>"; };
+		F8E7106D69E2E66C4CCEAEFF10F5E232 /* GLTFSceneKit */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = GLTFSceneKit; path = libGLTFSceneKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A811FD96D91B0EA3B0991B73B8539D /* GLTFAccessorSparse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFAccessorSparse.swift; path = Sources/GLTFSceneKit/schema/GLTFAccessorSparse.swift; sourceTree = "<group>"; };
+		FBF4DDF15AF2CAF6EC80CDD0B13E1228 /* GLTFSampler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFSampler.swift; path = Sources/GLTFSceneKit/schema/GLTFSampler.swift; sourceTree = "<group>"; };
+		FCCC48AB3C61F1F78E5982A25AAABD75 /* GLTFErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GLTFErrors.swift; path = Sources/GLTFSceneKit/GLTFErrors.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		835CA5F4463290B55DD15A3CE7D85A67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CF7C608D19EFAC70BB111CE7144DFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13670D38534E14A58B46138D1A3513C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD1E533305D98B83898C91456A57F02B /* GLTFShaderModifierFragment_alphaCutoff.shader */,
+				B0C68DCCCAB0B3F7D3499FCCBA793C9A /* GLTFShaderModifierSurface.shader */,
+				8B5D290136A3A8DC977606BFBF435DAA /* GLTFShaderModifierSurface_alphaModeBlend.shader */,
+				E7A91DB74EAEFC5D8F46D8BC7283F998 /* GLTFShaderModifierSurface_doubleSidedWorkaround.shader */,
+				3E691237000CD597CC99671025C0685F /* GLTFShaderModifierSurface_pbrSpecularGlossiness.shader */,
+				52916487C7DDF478793875127731A2D7 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader */,
+				A8C0010C5D3A968D37116050B6FC23A6 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2413E6BE7B121B5962E899107EC3D4B1 /* Pods-Viu3D */ = {
+			isa = PBXGroup;
+			children = (
+				AFA84CAF692C5B505C1D647F1FF5A7DB /* Pods-Viu3D.modulemap */,
+				045E09F8BEFE8CA29A675D3C12178564 /* Pods-Viu3D-acknowledgements.markdown */,
+				2C42C538280FAFF351C82CC508C39066 /* Pods-Viu3D-acknowledgements.plist */,
+				3B292598A5F1E98A0BE395D6187BECEF /* Pods-Viu3D-dummy.m */,
+				D99D68E2DFB05548E79F9E4B6F4B2173 /* Pods-Viu3D-resources.sh */,
+				3F484ED4414E8D71F91AD693F1E2DE04 /* Pods-Viu3D-umbrella.h */,
+				F411884C28FE54F1CB377DD2FF9AD261 /* Pods-Viu3D.debug.xcconfig */,
+				BB39197CD30EC913718815491C63DE26 /* Pods-Viu3D.release.xcconfig */,
+			);
+			name = "Pods-Viu3D";
+			path = "Target Support Files/Pods-Viu3D";
+			sourceTree = "<group>";
+		};
+		4EB8E1C6A1F75A5AF567DBA35CB3AAC9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4CBDE982D75105449C7453B46898548 /* GLTFSceneKit.modulemap */,
+				9D7DF53A737EA34DA96B3FE1EC5CBBC7 /* GLTFSceneKit-dummy.m */,
+				9FD778260FF876A4E75936CE40E881E4 /* GLTFSceneKit-prefix.pch */,
+				9E3181541CCDED2BA383127A1527D584 /* GLTFSceneKit-umbrella.h */,
+				3F18A6D9990F792811EA2E1C12FA2BA4 /* GLTFSceneKit.debug.xcconfig */,
+				A4D748873D1AC3B3B7843F8C98F1F678 /* GLTFSceneKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GLTFSceneKit";
+			sourceTree = "<group>";
+		};
+		8E09EE18ADBF9D0374B32B16B9336E62 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2413E6BE7B121B5962E899107EC3D4B1 /* Pods-Viu3D */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9C26B2FEDA293D8819C645C9B677F15C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8E7106D69E2E66C4CCEAEFF10F5E232 /* GLTFSceneKit */,
+				57BAD43345CB35531C5B94F9B7D7AB52 /* Pods-Viu3D */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA6FA4D766562F1AFE91E4AFDE71407D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B73C05183276971198A81831CFA0D4BC /* GLTFSceneKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B73C05183276971198A81831CFA0D4BC /* GLTFSceneKit */ = {
+			isa = PBXGroup;
+			children = (
+				9F00D992D0E9E3EF0A26DD9B4687E263 /* ExtensionList.swift */,
+				47227011B1AC1A2697084765C9D95D8F /* GLTFAccessor.swift */,
+				F9A811FD96D91B0EA3B0991B73B8539D /* GLTFAccessorSparse.swift */,
+				B5F7F36997A2C8380A944D3AEE7203AA /* GLTFAccessorSparseIndices.swift */,
+				ACA0EC7ECE0575FF2F670DFFF1799F72 /* GLTFAccessorSparseValues.swift */,
+				24F852B8FF67088D38E10257ADF20A5F /* GLTFAnimation.swift */,
+				5A1A37ECD3B206C80037218BEFB94450 /* GLTFAnimationChannel.swift */,
+				C1820A8BAFBC62940B14BAF2E609AE7D /* GLTFAnimationChannelTarget.swift */,
+				1D1091E842E840773B05F158F7590A6A /* GLTFAnimationSampler.swift */,
+				1D7A9CDEE13F6C5234446E597B36CD6B /* GLTFAsset.swift */,
+				33D24213884DE02BEF9E4012B6E6B0ED /* GLTFBuffer.swift */,
+				7F791A640A4533C98CF0DDA2CF0C17BF /* GLTFBufferView.swift */,
+				1C46B8174A593824769D1097C36EF440 /* GLTFCamera.swift */,
+				DF8638106707FDF66C33932E6454A3D4 /* GLTFCameraOrthographic.swift */,
+				E6B3FBC20AC08BC3A57CE9FE5BCF877D /* GLTFCameraPerspective.swift */,
+				FCCC48AB3C61F1F78E5982A25AAABD75 /* GLTFErrors.swift */,
+				036259F501AAD43299340A0F8241F6C8 /* GLTFExtension.swift */,
+				9374CE2B7D1B8B810CF74F7146607119 /* GLTFExtras.swift */,
+				3BFB3F950973CED3AF5FCE2FC3832765 /* GLTFExtrasTargetNames.swift */,
+				7357C69440E52D3D4BF8BAA53F508E63 /* GLTFFunctions.swift */,
+				178CE50FED5A4B4377F0E5B7853EF0D3 /* GLTFGlTF.swift */,
+				71D23A10C46145F8F563BFC914C2A466 /* GLTFGlTFChildOfRootProperty.swift */,
+				AB2FDB04431C3FB2239E6C097DC5F948 /* GLTFGlTFid.swift */,
+				F1BE5818F88CB9A6E281F10A357D0186 /* GLTFGlTFProperty.swift */,
+				9CEB5C951E470A62B3B4E4A612E59ECD /* GLTFImage.swift */,
+				E892C4E1110997D08D7238D126D942E9 /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift */,
+				DDE16E3F99B9527B94677669E3B51F4D /* GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift */,
+				D81D46EADCC6B9B3340005D5068F0879 /* GLTFMaterial.swift */,
+				76955F36F9E685C80A48DD6EADA3EEF0 /* GLTFMaterialNormalTextureInfo.swift */,
+				0164E1C6CB3722B91287183563CD9A3A /* GLTFMaterialOcclusionTextureInfo.swift */,
+				2C609E65CE3315FEA9FBF6C2F32F1390 /* GLTFMaterialPbrMetallicRoughness.swift */,
+				6E392B6ACE7775F9694F4EE6AF3E2BDC /* GLTFMesh.swift */,
+				43B4613F4317CAFF5595AE288CAC3256 /* GLTFMeshPrimitive.swift */,
+				3A0B4CA94AFCC04DCAAB607F3640916B /* GLTFNode.swift */,
+				FBF4DDF15AF2CAF6EC80CDD0B13E1228 /* GLTFSampler.swift */,
+				05B07E9A7829DD0AB6346C47CA997494 /* GLTFScene.swift */,
+				B399EF49A4622055C50D7359A31D1CC6 /* GLTFSceneSource.swift */,
+				7CB2481CF8CDC32842210484EB7C77BF /* GLTFSkin.swift */,
+				65D996C01441D16F46C5021F0120256C /* GLTFTexture.swift */,
+				3A6BAA36A965D66B2BF5CE9C7E6C9385 /* GLTFTextureInfo.swift */,
+				6AC7D67395A84D500F53DAA471D20938 /* GLTFTypes.swift */,
+				D1F27186C8B8359778A8819C2D48F55A /* GLTFUnarchiver.swift */,
+				13670D38534E14A58B46138D1A3513C5 /* Resources */,
+				4EB8E1C6A1F75A5AF567DBA35CB3AAC9 /* Support Files */,
+			);
+			name = GLTFSceneKit;
+			path = GLTFSceneKit;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				AA6FA4D766562F1AFE91E4AFDE71407D /* Pods */,
+				9C26B2FEDA293D8819C645C9B677F15C /* Products */,
+				8E09EE18ADBF9D0374B32B16B9336E62 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1FAAA24541D20CD3BBEDAD1339B19FE5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C0AD1426C78E626588A4007ED72EB6 /* GLTFSceneKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88863109AF6755292D3C9ED2C6C20133 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50EE1F9C860DEE7CC6C02876EC28CDE4 /* Pods-Viu3D-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2665B1779B880B2D882474D5E6EA6B13 /* GLTFSceneKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0317E7F611357E3EA3ED0F133149ED7 /* Build configuration list for PBXNativeTarget "GLTFSceneKit" */;
+			buildPhases = (
+				1FAAA24541D20CD3BBEDAD1339B19FE5 /* Headers */,
+				F5579536AEAEC6A29F604ED6518F7717 /* Sources */,
+				F4CF7C608D19EFAC70BB111CE7144DFB /* Frameworks */,
+				3872D8F85CC124BD38770E30042D5C3D /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLTFSceneKit;
+			productName = GLTFSceneKit;
+			productReference = F8E7106D69E2E66C4CCEAEFF10F5E232 /* GLTFSceneKit */;
+			productType = "com.apple.product-type.library.static";
+		};
+		37D99DD8F9990DC9C131E1C842DF4A08 /* Pods-Viu3D */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C78D1107B002151F65F802A650AD7C4 /* Build configuration list for PBXNativeTarget "Pods-Viu3D" */;
+			buildPhases = (
+				88863109AF6755292D3C9ED2C6C20133 /* Headers */,
+				5EEDD6ED748FF0841039C36249B62519 /* Sources */,
+				835CA5F4463290B55DD15A3CE7D85A67 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC002532168A726E9BDCBE39B7C967D2 /* PBXTargetDependency */,
+			);
+			name = "Pods-Viu3D";
+			productName = "Pods-Viu3D";
+			productReference = 57BAD43345CB35531C5B94F9B7D7AB52 /* Pods-Viu3D */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9C26B2FEDA293D8819C645C9B677F15C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2665B1779B880B2D882474D5E6EA6B13 /* GLTFSceneKit */,
+				37D99DD8F9990DC9C131E1C842DF4A08 /* Pods-Viu3D */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3872D8F85CC124BD38770E30042D5C3D /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/GLTFSceneKit/GLTFSceneKit.modulemap",
+				"${PODS_ROOT}/Headers/Public/GLTFSceneKit/GLTFSceneKit-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/GLTFSceneKit-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/GLTFSceneKit/GLTFSceneKit.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/GLTFSceneKit/GLTFSceneKit-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EEDD6ED748FF0841039C36249B62519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C7EFFD23E85EF3B2C7D938A6544D6B0 /* Pods-Viu3D-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5579536AEAEC6A29F604ED6518F7717 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920344C5A6C7171A30A2178B8B598E19 /* ExtensionList.swift in Sources */,
+				8BD50FA7C05DB4EA5FCCB97C2B48FACE /* GLTFAccessor.swift in Sources */,
+				5F76D8862FFA6E8961F02A7CA8E2607C /* GLTFAccessorSparse.swift in Sources */,
+				D79EC352A37505ECC99A7F84222E76A9 /* GLTFAccessorSparseIndices.swift in Sources */,
+				A594388925AF56BA44872FB0F04CEDD6 /* GLTFAccessorSparseValues.swift in Sources */,
+				3F0A266AD7D8973A4BC51E29A080AC18 /* GLTFAnimation.swift in Sources */,
+				92F765E373A6C000A5A077F7B2A4A3E5 /* GLTFAnimationChannel.swift in Sources */,
+				E8DE07A128ADE9A7672805E9C5953847 /* GLTFAnimationChannelTarget.swift in Sources */,
+				2F1939DC3D308B0132DF75C05831E82F /* GLTFAnimationSampler.swift in Sources */,
+				1743531FF5CD37A084FD4F783CA9141F /* GLTFAsset.swift in Sources */,
+				2421AEC89235FA53E437257F6B005602 /* GLTFBuffer.swift in Sources */,
+				4B36EB3C6093471DB6189B2CFD78EC9B /* GLTFBufferView.swift in Sources */,
+				7D98745B0C8D272F4C8FDAA15267A711 /* GLTFCamera.swift in Sources */,
+				8E72CCFFB4D3D748C807B2FF5963AB44 /* GLTFCameraOrthographic.swift in Sources */,
+				C69C93D8C93D124BBC93EEB6B1C1C0DA /* GLTFCameraPerspective.swift in Sources */,
+				6549E39EE7190055639F279577D66FBF /* GLTFErrors.swift in Sources */,
+				808C7872FB028DDC9A4A07CDF7F3CDE8 /* GLTFExtension.swift in Sources */,
+				A40F2C8761D71FDC5727B3565EAD5A9E /* GLTFExtras.swift in Sources */,
+				4C37414C3669F403B4A6C70B013907DC /* GLTFExtrasTargetNames.swift in Sources */,
+				B98A05FEA518802E8FA0F4EDD79D8B69 /* GLTFFunctions.swift in Sources */,
+				F49173B20A5C1387F0F03304C86BBF8E /* GLTFGlTF.swift in Sources */,
+				00C3F5059FF4F208311F364DAC722A36 /* GLTFGlTFChildOfRootProperty.swift in Sources */,
+				9ABE8426C5D00EEEB08B0FC003659E1D /* GLTFGlTFid.swift in Sources */,
+				2793DF7C6867104CB8131BD26C5F8B2A /* GLTFGlTFProperty.swift in Sources */,
+				173DAC03379FD72325C90E1300223238 /* GLTFImage.swift in Sources */,
+				D5492412A420D864281867AA874C6EFF /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift in Sources */,
+				58CF0AF3E604226E935B112219A6BDFE /* GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift in Sources */,
+				3806FB2F2FB0F62FFB45EDC4A774A2F6 /* GLTFMaterial.swift in Sources */,
+				1AFC22603A537704E8B06BE6BC2410BE /* GLTFMaterialNormalTextureInfo.swift in Sources */,
+				ACCBF441B0402845687AD973778DA673 /* GLTFMaterialOcclusionTextureInfo.swift in Sources */,
+				03E2A1B9A501FE683572B8D1DED552B2 /* GLTFMaterialPbrMetallicRoughness.swift in Sources */,
+				3B5DF586D174B8B690B04F0B6FDEDB54 /* GLTFMesh.swift in Sources */,
+				F96A9813A19BB0FD5F2EC60A8AF8F42A /* GLTFMeshPrimitive.swift in Sources */,
+				D8EFC901D971583B61C9C1B7A375B120 /* GLTFNode.swift in Sources */,
+				418016526F96F7972D61A92AD68B2455 /* GLTFSampler.swift in Sources */,
+				6697884E139DCCDD29CD7A3CBCA31BCE /* GLTFScene.swift in Sources */,
+				C91F00E65DB6AD256D00F1F40A3A1424 /* GLTFSceneKit-dummy.m in Sources */,
+				5D4BD5F75A45B8C93D45884FF4D27A78 /* GLTFSceneSource.swift in Sources */,
+				6A91C698254344D1287A3002F252C6DF /* GLTFSkin.swift in Sources */,
+				0677867B3D7BDDD307B13EC0793DD2EA /* GLTFTexture.swift in Sources */,
+				B68E2AC09E72C8CA06A46CD430C273C9 /* GLTFTextureInfo.swift in Sources */,
+				121DB4B9E6A9D542C529E813C7568E4C /* GLTFTypes.swift in Sources */,
+				07111B09B8F7E19D13FF81382774FCB6 /* GLTFUnarchiver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC002532168A726E9BDCBE39B7C967D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GLTFSceneKit;
+			target = 2665B1779B880B2D882474D5E6EA6B13 /* GLTFSceneKit */;
+			targetProxy = A575A1A81E1FB905CEB1EDBD695EA267 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		244857304613F4DC1543282E361610FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB39197CD30EC913718815491C63DE26 /* Pods-Viu3D.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Viu3D/Pods-Viu3D.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5ECD13E8910BDB77BDD3B01F5E33FED0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4D748873D1AC3B3B7843F8C98F1F678 /* GLTFSceneKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/GLTFSceneKit/GLTFSceneKit-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/GLTFSceneKit/GLTFSceneKit.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GLTFSceneKit;
+				PRODUCT_NAME = GLTFSceneKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9BABF53C7547C822EE635300988512B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F411884C28FE54F1CB377DD2FF9AD261 /* Pods-Viu3D.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Viu3D/Pods-Viu3D.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BF5F1602A5398256F931CEA339EC8F1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F18A6D9990F792811EA2E1C12FA2BA4 /* GLTFSceneKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/GLTFSceneKit/GLTFSceneKit-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/GLTFSceneKit/GLTFSceneKit.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GLTFSceneKit;
+				PRODUCT_NAME = GLTFSceneKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C78D1107B002151F65F802A650AD7C4 /* Build configuration list for PBXNativeTarget "Pods-Viu3D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BABF53C7547C822EE635300988512B7 /* Debug */,
+				244857304613F4DC1543282E361610FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0317E7F611357E3EA3ED0F133149ED7 /* Build configuration list for PBXNativeTarget "GLTFSceneKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF5F1602A5398256F931CEA339EC8F1F /* Debug */,
+				5ECD13E8910BDB77BDD3B01F5E33FED0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

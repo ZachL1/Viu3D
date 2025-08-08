@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-Viu3D/Pods-Viu3D-resources.sh
+${PODS_ROOT}/GLTFSceneKit/Sources/GLTFSceneKit/GLTFShaderModifierFragment_alphaCutoff.shader
+${PODS_ROOT}/GLTFSceneKit/Sources/GLTFSceneKit/GLTFShaderModifierSurface.shader
+${PODS_ROOT}/GLTFSceneKit/Sources/GLTFSceneKit/GLTFShaderModifierSurface_alphaModeBlend.shader
+${PODS_ROOT}/GLTFSceneKit/Sources/GLTFSceneKit/GLTFShaderModifierSurface_doubleSidedWorkaround.shader
+${PODS_ROOT}/GLTFSceneKit/Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness.shader
+${PODS_ROOT}/GLTFSceneKit/Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader
+${PODS_ROOT}/GLTFSceneKit/Sources/GLTFSceneKit/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader

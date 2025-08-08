@@ -1,0 +1,6 @@
+module Pods_Viu3D {
+  umbrella header "Pods-Viu3D-umbrella.h"
+
+  export *
+  module * { export * }
+}

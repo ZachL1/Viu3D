@@ -1,5 +1,6 @@
 import SwiftUI
 import SceneKit
+import GLTFSceneKit
 
 struct SceneKitView: UIViewRepresentable {
     @ObservedObject var modelData: ModelData
@@ -74,10 +75,21 @@ struct SceneKitView: UIViewRepresentable {
     
     private func loadModel(from url: URL, into scene: SCNScene) {
         do {
-            let modelScene = try SCNScene(url: url, options: [
-                .checkConsistency: true,
-                .flattenScene: false
-            ])
+            let modelScene: SCNScene
+            
+            // 根据文件格式选择不同的加载方式
+            if GLTFLoader.isGLTFFile(url: url) {
+                // 使用GLTFSceneKit加载glTF/GLB文件
+                modelScene = try GLTFLoader.loadScene(from: url)
+                print("Loaded glTF/GLB file: \(url.lastPathComponent)")
+            } else {
+                // 使用SceneKit原生加载器
+                modelScene = try SCNScene(url: url, options: [
+                    .checkConsistency: true,
+                    .flattenScene: false
+                ])
+                print("Loaded native format file: \(url.lastPathComponent)")
+            }
             
             // 创建一个容器节点来包含模型
             let modelNode = SCNNode()
@@ -88,8 +100,13 @@ struct SceneKitView: UIViewRepresentable {
                 modelNode.addChildNode(child)
             }
             
-            // 应用基础材质设置
-            setupBasicMaterials(node: modelNode)
+            // 应用基础材质设置（只对非glTF文件，因为glTF可能有自己的PBR材质）
+            if !GLTFLoader.isGLTFFile(url: url) {
+                setupBasicMaterials(node: modelNode)
+            } else {
+                // 对于glTF文件，保持原有材质但确保双面渲染
+                ensureDoubleSidedMaterials(node: modelNode)
+            }
             
             // 计算模型的边界框并居中
             let (min, max) = modelNode.boundingBox
@@ -110,7 +127,7 @@ struct SceneKitView: UIViewRepresentable {
         }
     }
     
-    // 基础材质设置
+    // 基础材质设置（用于非glTF文件）
     private func setupBasicMaterials(node: SCNNode) {
         node.enumerateChildNodes { childNode, _ in
             if let geometry = childNode.geometry {
@@ -119,6 +136,20 @@ struct SceneKitView: UIViewRepresentable {
                     material.lightingModel = .lambert
                     
                     // 启用双面渲染
+                    material.isDoubleSided = true
+                }
+            }
+//            return true
+        }
+    }
+    
+    // 确保双面渲染（用于glTF文件，保持原有材质设置）
+    private func ensureDoubleSidedMaterials(node: SCNNode) {
+        node.enumerateChildNodes { childNode, _ in
+            if let geometry = childNode.geometry {
+                for material in geometry.materials {
+                    // 保持glTF原有的光照模型（可能是PBR）
+                    // 只确保启用双面渲染
                     material.isDoubleSided = true
                 }
             }

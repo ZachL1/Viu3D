@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0F423BCFEBF84616494712D6 /* libPods-Viu3D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 494FF3905B5EE11A1AB11C6A /* libPods-Viu3D.a */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		494FF3905B5EE11A1AB11C6A /* libPods-Viu3D.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Viu3D.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922A021F2E41A2FD00A1BA0F /* Viu3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viu3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B58271CD0029B6367ED4A58 /* Pods-Viu3D.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viu3D.release.xcconfig"; path = "Target Support Files/Pods-Viu3D/Pods-Viu3D.release.xcconfig"; sourceTree = "<group>"; };
+		E21A8CD90F36C8FFC999AF00 /* Pods-Viu3D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viu3D.debug.xcconfig"; path = "Target Support Files/Pods-Viu3D/Pods-Viu3D.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,17 +30,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F423BCFEBF84616494712D6 /* libPods-Viu3D.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E69A6218E12168D2B846C41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				494FF3905B5EE11A1AB11C6A /* libPods-Viu3D.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50203F3C9E6A8D13C1253FCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E21A8CD90F36C8FFC999AF00 /* Pods-Viu3D.debug.xcconfig */,
+				9B58271CD0029B6367ED4A58 /* Pods-Viu3D.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		922A02162E41A2FD00A1BA0F = {
 			isa = PBXGroup;
 			children = (
 				922A02212E41A2FD00A1BA0F /* Viu3D */,
 				922A02202E41A2FD00A1BA0F /* Products */,
+				50203F3C9E6A8D13C1253FCB /* Pods */,
+				4E69A6218E12168D2B846C41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +79,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922A022A2E41A2FE00A1BA0F /* Build configuration list for PBXNativeTarget "Viu3D" */;
 			buildPhases = (
+				1E42DB3F64C5FA879611F6D4 /* [CP] Check Pods Manifest.lock */,
 				922A021B2E41A2FD00A1BA0F /* Sources */,
 				922A021C2E41A2FD00A1BA0F /* Frameworks */,
 				922A021D2E41A2FD00A1BA0F /* Resources */,
+				CDF4C816BDD95E808DEF1EAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -64,8 +93,6 @@
 				922A02212E41A2FD00A1BA0F /* Viu3D */,
 			);
 			name = Viu3D;
-			packageProductDependencies = (
-			);
 			productName = Viu3D;
 			productReference = 922A021F2E41A2FD00A1BA0F /* Viu3D.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +140,52 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E42DB3F64C5FA879611F6D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Viu3D-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDF4C816BDD95E808DEF1EAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Viu3D/Pods-Viu3D-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Viu3D/Pods-Viu3D-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Viu3D/Pods-Viu3D-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		922A021B2E41A2FD00A1BA0F /* Sources */ = {
@@ -248,6 +321,7 @@
 		};
 		922A022B2E41A2FE00A1BA0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E21A8CD90F36C8FFC999AF00 /* Pods-Viu3D.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -255,6 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N5K265AVFQ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -276,6 +351,7 @@
 		};
 		922A022C2E41A2FE00A1BA0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B58271CD0029B6367ED4A58 /* Pods-Viu3D.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -283,6 +359,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N5K265AVFQ;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

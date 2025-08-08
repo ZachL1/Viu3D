@@ -7,12 +7,14 @@ struct DocumentPicker: UIViewControllerRepresentable {
     var onError: ((String) -> Void)?
     
     func makeUIViewController(context: Context) -> UIDocumentPickerViewController {
-        // 支持的文件类型：USDZ, USD, DAE, OBJ
+        // 支持的文件类型：USDZ, USD, DAE, OBJ, GLTF, GLB
         let supportedTypes: [UTType] = [
             UTType(filenameExtension: "usdz") ?? UTType.data,
             UTType(filenameExtension: "usd") ?? UTType.data,
             UTType(filenameExtension: "dae") ?? UTType.data,
-            UTType(filenameExtension: "obj") ?? UTType.data
+            UTType(filenameExtension: "obj") ?? UTType.data,
+            UTType(filenameExtension: "gltf") ?? UTType.data,
+            UTType(filenameExtension: "glb") ?? UTType.data
         ]
         
         let picker = UIDocumentPickerViewController(forOpeningContentTypes: supportedTypes, asCopy: true)
@@ -57,64 +59,36 @@ struct DocumentPicker: UIViewControllerRepresentable {
                 return
             }
             
-            // 确保在函数结束时停止访问
-            defer {
-                url.stopAccessingSecurityScopedResource()
-            }
-            
             // 检查文件是否可读
             guard FileManager.default.fileExists(atPath: url.path) else {
                 print("File does not exist at path: \(url.path)")
+                url.stopAccessingSecurityScopedResource()
                 DispatchQueue.main.async {
                     self.parent.onError?("无法访问所选文件")
                 }
                 return
             }
             
-            // 获取应用的Documents目录
-            guard let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                print("Cannot access Documents directory")
+            // 验证文件格式
+            let fileExtension = url.pathExtension.lowercased()
+            let supportedExtensions = ["usdz", "usd", "dae", "obj", "gltf", "glb"]
+            guard supportedExtensions.contains(fileExtension) else {
+                print("Unsupported file format: \(fileExtension)")
+                url.stopAccessingSecurityScopedResource()
                 DispatchQueue.main.async {
-                    self.parent.onError?("无法访问应用文档目录")
+                    self.parent.onError?("不支持的文件格式: .\(fileExtension)")
                 }
                 return
             }
             
-            // 创建唯一的文件名以避免冲突
-            let fileName = url.lastPathComponent
-            let destinationURL = documentsPath.appendingPathComponent(fileName)
+            print("File validation successful, using original URL")
             
-            do {
-                // 如果目标文件已存在，先删除
-                if FileManager.default.fileExists(atPath: destinationURL.path) {
-                    try FileManager.default.removeItem(at: destinationURL)
-                    print("Removed existing file at: \(destinationURL.path)")
-                }
-                
-                // 复制文件到Documents目录
-                try FileManager.default.copyItem(at: url, to: destinationURL)
-                print("Successfully copied file to: \(destinationURL.path)")
-                
-                // 验证复制是否成功
-                guard FileManager.default.fileExists(atPath: destinationURL.path) else {
-                    print("File copy verification failed")
-                    DispatchQueue.main.async {
-                        self.parent.onError?("文件复制验证失败")
-                    }
-                    return
-                }
-                
-                // 在主线程上更新UI
-                DispatchQueue.main.async {
-                    self.parent.selectedFileURL = destinationURL
-                    self.parent.presentationMode.wrappedValue.dismiss()
-                }
-                
-            } catch {
-                print("Error copying file: \(error.localizedDescription)")
-                DispatchQueue.main.async {
-                    self.parent.onError?("文件复制失败: \(error.localizedDescription)")
-                }
+            // 直接使用原始URL，不复制文件
+            // 注意：这里不调用stopAccessingSecurityScopedResource()
+            // 因为我们需要保持对文件的访问权限，直到不再需要它
+            DispatchQueue.main.async {
+                self.parent.selectedFileURL = url
+                self.parent.presentationMode.wrappedValue.dismiss()
             }
         }
         
