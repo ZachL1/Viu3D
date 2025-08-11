@@ -9,11 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var modelData = ModelData()
-    @State private var showingControls = true
+    @StateObject private var generationState = GenerationState()
     @State private var showingDocumentPicker = false
     @State private var showingModelInfo = false
+    @State private var showingHelp = false
     @State private var selectedFileURL: URL?
     @State private var filePickerError: String?
+    
+    private var taskManager: GenerationTaskManager {
+        GenerationTaskManager(generationState: generationState)
+    }
     
     var body: some View {
         GeometryReader { geometry in
@@ -72,13 +77,20 @@ struct ContentView: View {
                         
                         Spacer()
                         
-                        // 文件选择按钮
-                        Button(action: { showingDocumentPicker = true }) {
-                            Image(systemName: "folder")
+                        Text("AI 3D Generator")
+                            .font(.caption)
+                            .foregroundColor(.white.opacity(0.8))
+                            .shadow(radius: 1)
+                        
+                        Spacer()
+                        
+                        // 帮助按钮
+                        Button(action: { showingHelp = true }) {
+                            Image(systemName: "questionmark.circle")
                                 .font(.title2)
                                 .foregroundColor(.white)
                                 .padding(8)
-                                .background(Color.blue.opacity(0.3))
+                                .background(Color.orange.opacity(0.3))
                                 .clipShape(Circle())
                         }
                         
@@ -89,16 +101,6 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                                 .padding(8)
                                 .background(Color.green.opacity(0.3))
-                                .clipShape(Circle())
-                        }
-                        
-                        // 控制面板切换按钮
-                        Button(action: { showingControls.toggle() }) {
-                            Image(systemName: showingControls ? "slider.horizontal.3" : "slider.horizontal.below.rectangle")
-                                .font(.title2)
-                                .foregroundColor(.white)
-                                .padding(8)
-                                .background(Color.black.opacity(0.3))
                                 .clipShape(Circle())
                         }
                     }
@@ -131,15 +133,31 @@ struct ContentView: View {
                 VStack {
                     Spacer()
                     
-                    if showingControls && !showingModelInfo {
-                        ControlPanel(modelData: modelData)
-                            .padding(.horizontal)
-                            .transition(.move(edge: .bottom).combined(with: .opacity))
+                    if !showingModelInfo {
+                        VStack(spacing: 12) {
+                            // 生成状态显示
+                            GenerationStatusView(generationState: generationState)
+                            
+                            // 生成输入界面
+                            GenerationInputView(
+                                generationState: generationState,
+                                onGenerate: {
+                                    Task {
+                                        await taskManager.startGeneration()
+                                    }
+                                },
+                                onFileSelect: {
+                                    showingDocumentPicker = true
+                                }
+                            )
+                        }
+                        .padding(.horizontal)
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
                     }
                 }
                 
                 // 手势提示 - 右上角（仅在没有显示其他面板时显示）
-                if !showingControls && !showingModelInfo {
+                if !showingModelInfo && !generationState.isGenerating {
                     VStack {
                         HStack {
                             Spacer()
@@ -161,7 +179,7 @@ struct ContentView: View {
                             .cornerRadius(8)
                             .padding(.trailing)
                         }
-                        .padding(.top, geometry.safeAreaInsets.top)
+                        .padding(.top, 120)
                         
                         Spacer()
                     }
@@ -175,18 +193,26 @@ struct ContentView: View {
                 endPoint: .bottomTrailing
             )
         )
-        .animation(.easeInOut(duration: 0.3), value: showingControls)
         .animation(.easeInOut(duration: 0.3), value: showingModelInfo)
+        .animation(.easeInOut(duration: 0.3), value: generationState.isGenerating)
         .statusBarHidden()
         .sheet(isPresented: $showingDocumentPicker) {
             DocumentPicker(selectedFileURL: $selectedFileURL) { error in
                 filePickerError = error
             }
         }
+        .sheet(isPresented: $showingHelp) {
+            HelpTipsView(isPresented: $showingHelp)
+        }
         .onChange(of: selectedFileURL) { newURL in
             if let url = newURL {
                 modelData.loadModel(from: url)
                 selectedFileURL = nil // 重置选择状态
+            }
+        }
+        .onChange(of: generationState.currentMode) { mode in
+            if mode == .file {
+                showingDocumentPicker = true
             }
         }
         .onChange(of: modelData.errorMessage) { _ in
@@ -206,6 +232,26 @@ struct ContentView: View {
                     withAnimation {
                         filePickerError = nil
                     }
+                }
+            }
+        }
+        .onChange(of: generationState.generationError) { _ in
+            // 自动清除生成错误消息
+            if generationState.generationError != nil {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                    withAnimation {
+                        generationState.generationError = nil
+                    }
+                }
+            }
+        }
+        .onChange(of: generationState.generatedModelURL) { newURL in
+            // 加载新生成的模型
+            if let url = newURL {
+                modelData.loadModel(from: url)
+                // 清除生成状态，显示新模型
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    generationState.reset()
                 }
             }
         }

@@ -24,7 +24,7 @@ class GLTFLoader {
             print("Loading glTF file: \(url.lastPathComponent)")
             
             // 使用GLTFSceneKit加载glTF文件
-            let sceneSource = try GLTFSceneSource(url: url)
+            let sceneSource = GLTFSceneSource(url: url)
             let scene = try sceneSource.scene()
             
             print("Successfully loaded glTF scene")
@@ -68,7 +68,7 @@ class GLTFLoader {
         var materialCount = 0
         
         do {
-            let sceneSource = try GLTFSceneSource(url: url)
+            let sceneSource = GLTFSceneSource(url: url)
             let scene = try sceneSource.scene()
             
             scene.rootNode.enumerateChildNodes { node, _ in
