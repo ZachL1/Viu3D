@@ -26,17 +26,26 @@ class ModelData: ObservableObject {
     }
     
     init() {
-        // 设置默认的内置模型
-        if let defaultURL = Bundle.main.url(forResource: "plane", withExtension: "usdz") {
-            self.modelURL = defaultURL
-            self.modelName = "plane"
-            updateModelInfo(for: defaultURL)
-        }
+        // 不再默认加载模型
+        // plane.usdz 将作为demo历史记录添加
     }
     
     deinit {
         // 释放安全作用域资源
         stopAccessingCurrentSecurityScopedResource()
+    }
+    
+    // 清除当前模型（进入创作界面时使用）
+    func clearModel() {
+        stopAccessingCurrentSecurityScopedResource()
+        DispatchQueue.main.async {
+            self.modelURL = nil
+            self.modelName = ""
+            self.errorMessage = nil
+            self.modelInfo = ModelInfo()
+            self.rotation = 0.0
+            self.scale = 1.0
+        }
     }
     
     // 加载新模型

@@ -38,31 +38,31 @@ struct ModelInfoPanel: View {
                 VStack(spacing: 12) {
                     // 基本信息
                     InfoSection(title: "文件信息") {
-                        InfoRow(label: "文件名", value: modelData.modelInfo.fileName)
-                        InfoRow(label: "文件大小", value: modelData.modelInfo.fileSize)
+                        InfoRow(label: "文件名", value: modelData.modelInfo.fileName, icon: "doc.text")
+                        InfoRow(label: "文件大小", value: modelData.modelInfo.fileSize, icon: "doc")
                     }
                     
                     // 几何信息
                     InfoSection(title: "几何信息") {
-                        InfoRow(label: "顶点数量", value: "\(modelData.modelInfo.vertexCount)")
-                        InfoRow(label: "三角形数量", value: "\(modelData.modelInfo.triangleCount)")
-                        InfoRow(label: "材质数量", value: "\(modelData.modelInfo.materialCount)")
-                        InfoRow(label: "边界框大小", value: modelData.modelInfo.boundingBoxSize)
+                        InfoRow(label: "顶点数量", value: "\(modelData.modelInfo.vertexCount)", icon: "point.3.connected.trianglepath.dotted")
+                        InfoRow(label: "三角形数量", value: "\(modelData.modelInfo.triangleCount)", icon: "triangle")
+                        InfoRow(label: "材质数量", value: "\(modelData.modelInfo.materialCount)", icon: "paintbrush")
+                        InfoRow(label: "边界框大小", value: modelData.modelInfo.boundingBoxSize, icon: "cube")
                     }
                     
                     // 变换信息
                     InfoSection(title: "当前变换") {
-                        InfoRow(label: "旋转角度", value: "\(Int(modelData.rotation * 180 / Float.pi))°")
-                        InfoRow(label: "缩放比例", value: String(format: "%.1fx", modelData.scale))
+                        InfoRow(label: "旋转角度", value: "\(Int(modelData.rotation * 180 / Float.pi))°", icon: "rotate.3d")
+                        InfoRow(label: "缩放比例", value: String(format: "%.1fx", modelData.scale), icon: "plus.magnifyingglass")
                     }
                     
                     // 性能信息
                     InfoSection(title: "渲染信息") {
-                        InfoRow(label: "渲染引擎", value: "SceneKit")
-                        InfoRow(label: "光照模式", value: getLightingMode())
-                        InfoRow(label: "抗锯齿", value: "2x MSAA")
+                        InfoRow(label: "渲染引擎", value: "SceneKit", icon: "gear")
+                        InfoRow(label: "光照模式", value: getLightingMode(), icon: "light.max")
+                        InfoRow(label: "抗锯齿", value: "2x MSAA", icon: "square.grid.3x1.folder.badge.plus")
                         if isGLTFFile() {
-                            InfoRow(label: "格式支持", value: "GLTFSceneKit")
+                            InfoRow(label: "格式支持", value: "GLTFSceneKit", icon: "arrow.triangle.2.circlepath")
                         }
                     }
                 }
@@ -121,35 +121,7 @@ struct InfoSection<Content: View>: View {
     }
 }
 
-// 信息行组件
-struct InfoRow: View {
-    let label: String
-    let value: String
-    
-    var body: some View {
-        HStack {
-            Text(label)
-                .font(.caption)
-                .foregroundColor(.secondary)
-                .frame(width: 80, alignment: .leading)
-            
-            Text(":")
-                .font(.caption)
-                .foregroundColor(.secondary)
-            
-            Text(value)
-                .font(.caption)
-                .fontWeight(.medium)
-                .foregroundColor(.primary)
-            
-            Spacer()
-        }
-        .padding(.horizontal, 8)
-        .padding(.vertical, 2)
-        .background(Color(.systemGray6))
-        .cornerRadius(6)
-    }
-}
+// InfoRow component is now defined in SlidingBottomPanel.swift
 
 #Preview {
     VStack {

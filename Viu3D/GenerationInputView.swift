@@ -22,33 +22,35 @@ struct GenerationInputView: View {
             // Input Area
             inputArea
             
-            // Texture Option
-            HStack {
-                Image(systemName: generationState.generateTexture ? "checkmark.square.fill" : "square")
-                    .foregroundColor(generationState.generateTexture ? .blue : .gray)
-                    .onTapGesture {
-                        withAnimation(.easeInOut(duration: 0.2)) {
-                            generationState.generateTexture.toggle()
+            if generationState.currentMode != .file {
+                // Texture Option
+                HStack {
+                    Image(systemName: generationState.generateTexture ? "checkmark.square.fill" : "square")
+                        .foregroundColor(generationState.generateTexture ? .blue : .gray)
+                        .onTapGesture {
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                generationState.generateTexture.toggle()
+                            }
                         }
-                    }
-                
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Generate Texture")
-                        .font(.body)
-                        .foregroundColor(.primary)
                     
-                    Text("Higher quality with colors and materials")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Generate Texture")
+                            .font(.body)
+                            .foregroundColor(.primary)
+                        
+                        Text("Higher quality with colors and materials")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    Spacer()
                 }
+                .padding(.horizontal, 4)
+                .disabled(generationState.isGenerating)
                 
-                Spacer()
+                // Generate Button
+                generateButton
             }
-            .padding(.horizontal, 4)
-            .disabled(generationState.isGenerating)
-            
-            // Generate Button
-            generateButton
         }
         .padding()
         .background(Color(.systemGray6))

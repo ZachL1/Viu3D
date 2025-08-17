@@ -52,7 +52,7 @@ class GenerationState: ObservableObject {
             guard let image = selectedImage else { return false }
             return APIConfig.validateImageSize(image)
         case .file:
-            return true // File mode handled by DocumentPicker
+            return false // File mode handled by DocumentPicker
         }
     }
     
