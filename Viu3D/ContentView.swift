@@ -44,22 +44,6 @@ struct ContentView: View {
                         .ignoresSafeArea(.all)
                 }
                 
-                // 加载指示器
-                if modelData.isLoading {
-                    VStack {
-                        ProgressView()
-                            .scaleEffect(1.5)
-                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                        
-                        Text("加载中...")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding(.top, 8)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.black.opacity(0.5))
-                }
-                
                 // 错误提示
                 if let errorMessage = modelData.errorMessage ?? filePickerError {
                     VStack {
@@ -204,6 +188,22 @@ struct ContentView: View {
                         
                         Spacer()
                     }
+                }
+                
+                // 加载指示器
+                if modelData.isLoading {
+                    VStack {
+                        ProgressView()
+                            .scaleEffect(1.5)
+                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        
+                        Text("加载中...")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding(.top, 8)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.black.opacity(0.5))
                 }
                 
                 // 历史记录面板 - 左侧滑出 (类似ChatGPT)

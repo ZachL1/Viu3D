@@ -105,6 +105,7 @@ struct EnhancedModelInfoPanel: View {
     @State private var refreshTrigger = UUID()
     @State private var isEditingName = false
     @State private var editingName = ""
+    @State private var showingARPreview = false
     
     var body: some View {
         SlidingBottomPanel(
@@ -149,6 +150,9 @@ struct EnhancedModelInfoPanel: View {
             refreshTrigger = UUID()
         }
         .id(refreshTrigger)
+        .fullScreenCover(isPresented: $showingARPreview) {
+            FullARPreviewView(modelData: modelData, isPresented: $showingARPreview)
+        }
     }
     
     @ViewBuilder
@@ -283,6 +287,45 @@ struct EnhancedModelInfoPanel: View {
             
             InfoRow(label: "Format", value: modelData.modelURL?.pathExtension.uppercased() ?? "UNKNOWN", icon: "doc.text")
             InfoRow(label: "Anti-aliasing", value: "2x MSAA", icon: "square.grid.3x1.folder.badge.plus")
+            
+            // AR预览按钮
+            if modelData.modelURL != nil {
+                Button(action: {
+                    showingARPreview = true
+                }) {
+                    HStack(spacing: 12) {
+                        Image(systemName: "arkit")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                        
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("AR Preview")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                            Text("View in your space")
+                                .font(.caption)
+                                .foregroundColor(.white.opacity(0.8))
+                        }
+                        
+                        Spacer()
+                        
+                        Image(systemName: "chevron.right")
+                            .font(.caption)
+                            .foregroundColor(.white.opacity(0.6))
+                    }
+                    .padding()
+                    .background(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Color.blue, Color.purple]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                .buttonStyle(PlainButtonStyle())
+                .padding(.top, 8)
+            }
         }
     }
     

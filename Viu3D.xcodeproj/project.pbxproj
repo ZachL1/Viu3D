@@ -345,7 +345,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Viu3D/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Viu3D needs access to your camera to take photos for 3D model generation.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access for AR functionality and taking photos for 3D model generation.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Viu3D needs access to your photo library to select images for 3D model generation.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -378,7 +378,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Viu3D/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Viu3D needs access to your camera to take photos for 3D model generation.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access for AR functionality and taking photos for 3D model generation.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Viu3D needs access to your photo library to select images for 3D model generation.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
